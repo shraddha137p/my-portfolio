@@ -1,17 +1,8 @@
-# porfolio
+# Shraddha Pandey · Flutter Developer
 
-A new Flutter project.
+Personal portfolio: a static site (HTML, CSS, JavaScript), no build step.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Edit content:** everything (projects, experience, skills, links, theme) lives in `data.js`.
+- **Images:** put them in `assets/` and reference them from `data.js`.
+- **Preview locally:** open `index.html` in a browser.
+- **Deploy:** push to `main`; Vercel serves the repo root (see `vercel.json`).

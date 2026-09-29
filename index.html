@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Shraddha Pandey · Flutter Developer</title>
+  <meta name="description" content="Shraddha Pandey is a Flutter developer building fast, polished cross-platform mobile apps with Dart, Supabase and Firebase." />
+  <meta name="theme-color" content="#020618" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shraddha Pandey · Flutter Developer" />
+  <meta property="og:description" content="Fast, polished cross-platform apps built with Flutter." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="flutter3d.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Back to top">
+        <span class="nav__mark" data-bind="initials"></span>
+        <span class="nav__name" data-bind="name"></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li class="nav__indicator" aria-hidden="true"></li>
+          <li><a href="#work" data-nav="work">Work</a></li>
+          <li><a href="#stack" data-nav="stack">Stack</a></li>
+          <li><a href="#experience" data-nav="experience">Experience</a></li>
+          <li><a href="#about" data-nav="about">About</a></li>
+          <li><a href="#contact" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--ghost btn--sm nav__resume" data-href="resume" target="_blank" rel="noopener">
+          Resume <span class="i" data-icon="download"></span>
+        </a>
+        <a class="btn btn--primary btn--sm magnetic" href="#contact">Let's talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="spotlight" aria-hidden="true"></div>
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="container hero__center" data-stagger>
+        <p class="pill reveal" id="status">
+          <span class="pulse" aria-hidden="true"></span>
+          <span data-bind="hero.availability"></span>
+        </p>
+        <h1 class="hero__title reveal" id="hero-title" data-bind="name"></h1>
+        <p class="hero__role reveal" data-bind="role"></p>
+        <p class="hero__lede reveal" data-bind="hero.tagline"></p>
+        <div class="hero__ctas reveal">
+          <a class="btn btn--primary magnetic" href="#work">Explore work <span class="i" data-icon="arrow"></span></a>
+          <button class="btn btn--ghost magnetic" type="button" id="heroCopy"><span class="i" data-icon="copy"></span><span>Copy email</span></button>
+        </div>
+        <ul class="hero__socials reveal" id="heroSocials"></ul>
+      </div>
+      <a class="hero__scroll" href="#impact" aria-label="Scroll to content"><span></span></a>
+    </section>
+
+    <!-- ============ IMPACT ============ -->
+    <section class="section section--tight" id="impact" aria-labelledby="impact-title">
+      <div class="container">
+        <header class="sec-head sec-head--center reveal">
+          <h2 class="sec-title" id="impact-title" data-bind="sections.impact.title"></h2>
+          <p class="sec-sub" data-bind="sections.impact.sub"></p>
+        </header>
+        <ul class="impact" id="impactGrid" data-stagger></ul>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section class="section section--tight" id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <header class="sec-head sec-head--center reveal">
+          <p class="eyebrow"><span>01</span><span data-bind="sections.stack.eyebrow"></span></p>
+          <h2 class="sec-title" id="stack-title" data-bind="sections.stack.title"></h2>
+        </header>
+      </div>
+      <div class="marquee reveal" id="stackRow"></div>
+      <div class="marquee marquee--rev reveal" id="capRow"></div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section__glow section__glow--left" aria-hidden="true"></div>
+      <div class="container">
+        <header class="sec-head sec-head--center reveal">
+          <p class="eyebrow"><span>02</span><span data-bind="sections.work.eyebrow"></span></p>
+          <h2 class="sec-title" id="work-title" data-bind="sections.work.title"></h2>
+          <p class="sec-sub" data-bind="sections.work.sub"></p>
+        </header>
+        <div id="projects"></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container split">
+        <header class="sec-head split__aside reveal">
+          <p class="eyebrow"><span>03</span><span data-bind="sections.experience.eyebrow"></span></p>
+          <h2 class="sec-title" id="exp-title" data-bind="sections.experience.title"></h2>
+          <a class="text-link" data-href="resume" target="_blank" rel="noopener">Full résumé <span class="i" data-icon="arrow"></span></a>
+        </header>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__media reveal" id="aboutMedia"></div>
+        <div class="about__copy" data-stagger>
+          <header class="sec-head reveal">
+            <p class="eyebrow"><span>04</span><span data-bind="sections.about.eyebrow"></span></p>
+            <h2 class="sec-title" id="about-title" data-bind="sections.about.title"></h2>
+          </header>
+          <div class="about__text reveal" id="aboutText"></div>
+          <dl class="facts reveal" id="aboutFacts"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="section__glow section__glow--center" aria-hidden="true"></div>
+      <div class="container contact__grid">
+        <div class="contact__copy" data-stagger>
+          <p class="eyebrow reveal"><span>05</span><span data-bind="sections.contact.eyebrow"></span></p>
+          <h2 class="contact__title reveal" id="contact-title">
+            <span data-bind="contact.headline"></span>
+            <span class="grad-text" data-bind="contact.highlight"></span>
+          </h2>
+          <p class="sec-sub reveal" data-bind="contact.sub"></p>
+          <div class="contact__email reveal">
+            <a class="contact__mail" data-href="mailto"><span class="i" data-icon="mail"></span><span data-bind="email"></span></a>
+            <button class="icon-btn" type="button" id="copyEmail" aria-label="Copy email address">
+              <span class="i" data-icon="copy"></span>
+            </button>
+          </div>
+          <ul class="socials reveal" id="socials"></ul>
+        </div>
+
+        <form class="form glass reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="f-msg">Project or role</label>
+            <textarea id="f-msg" name="message" rows="5" required placeholder="Tell me a little about it…"></textarea>
+          </div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn--primary btn--block magnetic" type="submit">
+            Send message <span class="i" data-icon="send"></span>
+          </button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> <span data-bind="name"></span>. Designed &amp; built by hand.</p>
+      <a href="#top" class="text-link">Back to top <span class="i" data-icon="arrowUp"></span></a>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE TAB BAR ============ -->
+  <nav class="tabbar" aria-label="Mobile">
+    <a href="#top" data-nav="top"><span class="i" data-icon="home"></span><span>Home</span></a>
+    <a href="#work" data-nav="work"><span class="i" data-icon="grid"></span><span>Work</span></a>
+    <a href="#experience" data-nav="experience"><span class="i" data-icon="timeline"></span><span>Journey</span></a>
+    <a href="#about" data-nav="about"><span class="i" data-icon="user"></span><span>About</span></a>
+    <a href="#contact" data-nav="contact" class="tabbar__cta"><span class="i" data-icon="send"></span><span>Hire me</span></a>
+  </nav>
+
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>
